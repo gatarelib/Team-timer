@@ -2,10 +2,13 @@ import * as React from 'react';
 import './App.scss';
 import { AppState, TeamMate } from './interfaces';
 
-class App extends React.Component<{}, AppState>{
+class App extends React.Component<{}, AppState> {
     public timer:number = 0;
     public member:TeamMate;
-    public state = {
+
+  constructor(props) {
+    super(props);
+    this.state = {
       teamMates: ['Allan Ibutiti',
       'Damilare Olatuboson',
       'Ayobami Adelakun',
@@ -39,9 +42,6 @@ class App extends React.Component<{}, AppState>{
         "seconds": 0
       },
     }
-
-  constructor(props: any) {
-    super(props);
   }
 
   public render() {
